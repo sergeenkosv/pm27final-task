@@ -7,8 +7,12 @@ using namespace std;
 double power(double x, int n)
 {
 	double t = 1;
-	for (int i = 0; i < n; ++i)
-		t *= x;
+	while (n > 0) {
+		if (n % 2 == 1)
+			t *= x;
+		x *= x;
+		n /= 2;
+	}
 	return t;
 }
 
