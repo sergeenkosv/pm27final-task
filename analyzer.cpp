@@ -28,6 +28,10 @@ int main()
 	int n, m;
 	double q;
 	cin >> q >> n >> m;
-	/* q ^ (n/m) */
+ 	/* q ^ (n/m) */
+	if (m < 0) {
+		n = -n;
+		m = -m;
+	}
 	cout << root(power(q, n), m) << endl;
 }
