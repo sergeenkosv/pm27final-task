@@ -33,5 +33,18 @@ int main()
 		n = -n;
 		m = -m;
 	}
+	if (m % 2 == 0 && q < 0) {
+		cout << "Not real" << endl;
+		return 1;
+	}
+	if (m == 0 && n != 0) {
+		if (q < 1 && q > -1) {
+			cout << 0 << endl;
+			return 0;
+		} else {
+			cout << "inf" << endl;
+			return 0;
+		}
+	}
 	cout << root(power(q, n), m) << endl;
 }
